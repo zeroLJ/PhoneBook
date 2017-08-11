@@ -24,9 +24,6 @@ import java.util.ArrayList;
 public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyViewHolder>{
     private ArrayList<Contacts> contactsList;
     private Context context;
-    public static String NAME = "name";
-    public static String PHONENUM = "phoneNum";
-    public static String PHOTOID = "photoId";
     public static String CONTACTID = "contactId";
 
     ContactsAdapter(Context context, ArrayList<Contacts> contactsList){
@@ -65,9 +62,7 @@ public class ContactsAdapter extends RecyclerView.Adapter<ContactsAdapter.MyView
             public void onClick(View v) {
                 Intent intent = new Intent(context, ContactActivity.class);
                 Contacts contacts = contactsList.get(position);
-                intent.putExtra(NAME,contacts.name);
-                intent.putExtra(PHONENUM,contacts.phoneNum);
-                intent.putExtra(PHOTOID,contacts.photoId);
+                //传递此id用于查询与刷新该联系人的信息
                 intent.putExtra(CONTACTID,contacts.contactId);
                 context.startActivity(intent);
             }
