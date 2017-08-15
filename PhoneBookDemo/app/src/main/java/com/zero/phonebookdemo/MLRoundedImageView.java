@@ -13,9 +13,6 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 
-/**
- * Created by WatchVoice on 2016/10/12.
- */
 public class MLRoundedImageView extends android.support.v7.widget.AppCompatImageView {
 
     public MLRoundedImageView(Context context) {

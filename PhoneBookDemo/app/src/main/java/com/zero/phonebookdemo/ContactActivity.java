@@ -10,8 +10,9 @@ import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.zero.phonebookdemo.Adapter.CallListAdapter;
 
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -26,9 +27,8 @@ public class ContactActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contact);
         Intent intent = getIntent();
-        contactId = intent.getLongExtra(ContactsAdapter.CONTACTID,0);
+        contactId = intent.getLongExtra(CallListAdapter.CONTACTID,0);
     }
-
 
     //获取联系人头像
     private Bitmap getBitmap(Long photoId, Long contactId) {
@@ -66,7 +66,7 @@ public class ContactActivity extends AppCompatActivity {
 
         Bitmap contactPhoto = null;
         contactPhoto = getBitmap(photoId, contactId);
-        ((ImageView)findViewById(R.id.image)).setImageBitmap(contactPhoto);
+        ((MLRoundedImageView)findViewById(R.id.image)).setImageBitmap(contactPhoto);
 
     }
 

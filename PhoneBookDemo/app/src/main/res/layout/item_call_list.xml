@@ -7,14 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
-        
-        <com.zero.phonebookdemo.MLRoundedImageView
-            android:id="@+id/icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:scaleType="fitCenter"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_launcher" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -22,14 +14,7 @@
             android:layout_gravity="center"
             android:textSize="25dp"
             android:text="名字"
-            android:id="@+id/name"/>
+            android:id="@+id/name_item_call_list"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textSize="25dp"
-            android:text="13711330352"
-            android:id="@+id/phone_number"/>
     </LinearLayout>
 </LinearLayout>

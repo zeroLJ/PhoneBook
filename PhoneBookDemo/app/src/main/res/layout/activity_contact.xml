@@ -9,7 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <ImageView
+        <com.zero.phonebookdemo.MLRoundedImageView
+            android:scaleType="fitCenter"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/image"/>
