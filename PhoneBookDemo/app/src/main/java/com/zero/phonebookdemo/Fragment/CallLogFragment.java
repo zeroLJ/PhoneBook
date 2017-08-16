@@ -67,7 +67,6 @@ public class CallLogFragment extends Fragment {
 
     /**
      * 利用系统CallLog获取通话历史记录
-     *
      * @param activity
      * @param num      要读取记录的数量
      * @return
@@ -154,4 +153,6 @@ public class CallLogFragment extends Fragment {
         }
         return callLogInfoList;
     }
+
+
 }

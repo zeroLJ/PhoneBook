@@ -15,14 +15,14 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="通话记录"
+                android:text="添加通话记录"
                 android:layout_weight="1"
-                android:onClick="callLog" />
+                android:onClick="addCallLog" />
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="通讯录"
-                android:onClick="callList"
+                android:text="新建联系人"
+                android:onClick="addNewContact"
                 android:layout_weight="1"/>
         </LinearLayout>
         <android.support.v4.view.ViewPager
