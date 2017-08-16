@@ -18,10 +18,12 @@ import java.util.ArrayList;
  * Created by zero on 2017/8/10.
  */
 
-public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.MyViewHolder>{
+public class CallListAdapter extends RecyclerView.Adapter{
     private ArrayList<ContactInfo> contactInfoList;
     private Context context;
     public static String CONTACTID = "contactId";
+    public static int TYPE_CONTACT = 1001;
+    public static int TYPE_LETTER = 1002;
 
     public CallListAdapter(Context context, ArrayList<ContactInfo> contactInfoList){
         this.context = context;
@@ -29,23 +31,25 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.MyView
     }
 
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        MyViewHolder holder = new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_call_list, parent,
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        if(viewType == TYPE_CONTACT){
+            return new MyViewHolder(LayoutInflater.from(context).inflate(R.layout.item_call_list, parent,
                 false));
-        return holder;
-
+        }
+        if (viewType == TYPE_LETTER){
+            return new LetterViewHolder(LayoutInflater.from(context).inflate(R.layout.item_call_list_letter, parent,
+                    false));
+        }
+        return null;
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, final int position) {
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
         ContactInfo contactInfo = contactInfoList.get(position);
-        if (contactInfo.letter!=null && !contactInfo.letter.equals("")){
-            holder.name_tv.setText(contactInfo.letter);
-            holder.name_tv.setOnClickListener(null);
-        }else {
-            holder.name_tv.setText(contactInfo.name);
+        if(holder.getItemViewType() == TYPE_CONTACT){
+            ((MyViewHolder)holder).name_tv.setText(contactInfo.name);
             final Long contactId = contactInfo.contactId;
-            holder.name_tv.setOnClickListener(new View.OnClickListener() {
+            ((MyViewHolder)holder).name_tv.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(context, ContactActivity.class);
@@ -55,6 +59,16 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.MyView
                 }
             });
         }
+
+        if (holder.getItemViewType() == TYPE_LETTER){
+            ((LetterViewHolder)holder).letter_tv.setText(contactInfo.letter);
+        }
+    }
+
+    @Override
+    public int getItemViewType(int position) {
+        int type = contactInfoList.get(position).getType();
+        return type;
     }
 
     @Override
@@ -67,6 +81,14 @@ public class CallListAdapter extends RecyclerView.Adapter<CallListAdapter.MyView
         public MyViewHolder(View view) {
             super(view);
             name_tv = (TextView) view.findViewById(R.id.name_item_call_list);
+        }
+    }
+
+    class LetterViewHolder extends RecyclerView.ViewHolder{
+        TextView letter_tv;
+        public LetterViewHolder(View view) {
+            super(view);
+            letter_tv = (TextView) view.findViewById(R.id.letter_item_call_list);
         }
     }
 

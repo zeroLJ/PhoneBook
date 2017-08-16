@@ -18,10 +18,10 @@ import java.io.InputStream;
 import java.util.ArrayList;
 
 public class ContactActivity extends AppCompatActivity {
-    private String name;
-    private ArrayList<String> phoneNum = new ArrayList<>();
-    private Long photoId;
-    private Long contactId;
+    private String name;//联系人名称
+    private ArrayList<String> phoneNum = new ArrayList<>();//联系人手机号列表
+    private Long photoId;//联系人头像ID
+    private Long contactId;//联系人ID
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

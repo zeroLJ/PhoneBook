@@ -1,30 +1,29 @@
 package com.zero.phonebookdemo.InfoClass;
 
-import java.util.ArrayList;
+import com.zero.phonebookdemo.Adapter.CallListAdapter;
 
 /**
- * Created by WatchVoice04 on 2017/8/11.
+ * Created by zero on 2017/8/11.
  */
 
 public class ContactInfo {
     public String name;//联系人名称
-    public ArrayList<String> phoneNum = new ArrayList<>();//联系人手机号列表
-    public Long photoId;//联系人头像ID
     public Long contactId;//联系人ID
     public String letter;//联系人名称首字母
-    ContactInfo(String name, String phoneNum, Long photoId, Long contactId){
-        this.name = name;
-        this.phoneNum.add(phoneNum);
-        this.photoId = photoId;
-        this.contactId = contactId;
-    }
+    private int type;
 
     public ContactInfo(String name, Long contactId) {
         this.name = name;
         this.contactId = contactId;
+        type = CallListAdapter.TYPE_CONTACT;
     }
 
     public ContactInfo(String letter){
         this.letter = letter;
+        type = CallListAdapter.TYPE_LETTER;
+    }
+
+    public int getType() {
+        return type;
     }
 }

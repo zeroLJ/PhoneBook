@@ -17,12 +17,12 @@
                 android:layout_height="wrap_content"
                 android:text="通话记录"
                 android:layout_weight="1"
-                android:id="@+id/callLog"/>
+                android:onClick="callLog" />
             <Button
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="通讯录"
-                android:id="@+id/callList"
+                android:onClick="callList"
                 android:layout_weight="1"/>
         </LinearLayout>
         <android.support.v4.view.ViewPager

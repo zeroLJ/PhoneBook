@@ -36,14 +36,12 @@ public class CallLogAdapter extends RecyclerView.Adapter<CallLogAdapter.CallLogV
     public void onBindViewHolder(CallLogViewHolder holder, int position) {
         CallLogInfo callLogInfo = callLogInfoList.get(position);
         if(callLogInfo.callName != null){
-            holder.name_tv.setText(callLogInfo.callName + callLogInfo.callType);
+            holder.name_tv.setText(callLogInfo.callName);
             holder.number_tv.setText(callLogInfo.callNumber);
         }else {
-            holder.name_tv.setText(callLogInfo.callNumber + callLogInfo.callType);
+            holder.name_tv.setText(callLogInfo.callNumber);
             holder.number_tv.setText("");
         }
-//        holder.name_tv.setText(callLogInfo.callName);
-//        holder.number_tv.setText(callLogInfo.callNumber);
         holder.date_tv.setText(callLogInfo.callDate);
         holder.duration_tv.setText(callLogInfo.callDuration);
         if (callLogInfo.callType.equals(CallLogInfo.CALLIN)){

@@ -19,8 +19,8 @@ import com.bigkoo.quicksidebar.QuickSideBarTipsView;
 import com.bigkoo.quicksidebar.QuickSideBarView;
 import com.bigkoo.quicksidebar.listener.OnQuickSideBarTouchListener;
 import com.zero.phonebookdemo.Adapter.CallListAdapter;
-import com.zero.phonebookdemo.InfoClass.ContactInfo;
 import com.zero.phonebookdemo.HanZiToPinYinUtil;
+import com.zero.phonebookdemo.InfoClass.ContactInfo;
 import com.zero.phonebookdemo.R;
 
 import java.util.ArrayList;
@@ -148,8 +148,9 @@ public class CallListFragment extends Fragment {
                         letterList[26].add(contactInfo);
                     }
                 }
-                for (int i = 0; i < letters.length; i++) {
 
+                //为每个字母作为一个item添加进adapter里面，并记录其位置
+                for (int i = 0; i < letters.length; i++) {
                         hashMap.put(letters[i],contactInfoList.size());
                         Log.i("ssss","s"+contactInfoList.size());
                     if(letterList[i]!=null){
