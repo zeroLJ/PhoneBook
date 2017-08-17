@@ -5,20 +5,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context="com.zero.phonebookdemo.Fragment.CallListFragment">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:hint="搜索"
+                    android:id="@+id/search_et_callList"/>
                 <android.support.v7.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scrollbars="vertical"
+                    android:layout_below="@id/search_et_callList"
                     android:id="@+id/recyclerView_callList">
                 </android.support.v7.widget.RecyclerView>
                 <!-- 这个是浮动的提示 ，配合字母栏实现放大浮动提示滑动到哪个字母-->
@@ -46,8 +47,8 @@
                     app:sidebarTextSizeChoose="@dimen/textSize_quicksidebar_choose" />
             </RelativeLayout>
 
-        </LinearLayout>
-    </RelativeLayout>
+
+
 
 
 </FrameLayout>
