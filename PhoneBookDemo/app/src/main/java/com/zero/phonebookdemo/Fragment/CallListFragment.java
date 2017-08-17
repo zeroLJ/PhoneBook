@@ -32,6 +32,11 @@ import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import in.srain.cube.views.ptr.PtrClassicFrameLayout;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
+import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.PtrHandler;
+
 import static android.content.Context.INPUT_METHOD_SERVICE;
 
 /**
@@ -60,11 +65,10 @@ public class CallListFragment extends Fragment {
     private QuickSideBarTipsView quickSideBarTipsView;
     private EditText search_et;
 
-    public static final int INSERT = 1001;
-    public static final int SEARCH = 1002;
-    public static final int SEARCHFINISH = 1003;
-    public static final int NORMAL = 1004;
 
+    private static final int SEARCH = 1001;
+    private static final int SEARCHFINISH = 1002;
+    private static final int REFRESH = 1003;
     private InputMethodManager imm;
 
 
@@ -72,25 +76,40 @@ public class CallListFragment extends Fragment {
     private Timer timer;
 
     private boolean isSearching = false;
+
+    private PtrClassicFrameLayout mPtrFrame;
+
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             switch (msg.what){
-                case INSERT:
-                    adapter.notifyItemChanged(contactInfoList.size()-1);
-                    break;
                 case SEARCH:
                     Log.i("ssss",msg.obj.toString());
                     String str = msg.obj.toString();
                     getSearchCallList(str);
                     break;
                 case SEARCHFINISH:
-                    adapter_search = new CallListAdapter(getContext(), contactInfoList_search);
-                    recyclerView.setAdapter(adapter_search);
+                    if(isSearching){
+                        adapter_search = new CallListAdapter(getContext(), contactInfoList_search);
+                        recyclerView.setAdapter(adapter_search);
+                        manager.scrollToPositionWithOffset(0,0);
+                    }
+                    manager.setStackFromEnd(true);
+                    if (mPtrFrame.isRefreshing()){
+                        mPtrFrame.refreshComplete();//停止刷新效果
+                    }
                     break;
-                case NORMAL:
-                    recyclerView.setAdapter(adapter);
+                case REFRESH:
+                    if(!isSearching){
+                        recyclerView.setAdapter(adapter);
+                        manager.scrollToPositionWithOffset(0,0);
+                        manager.setStackFromEnd(true);
+                    }
+                    if (mPtrFrame.isRefreshing()){
+                        mPtrFrame.refreshComplete();//停止刷新效果
+                    }
+                    search_et.setVisibility(View.VISIBLE);
                     break;
             }
         }
@@ -131,7 +150,7 @@ public class CallListFragment extends Fragment {
         //设置adapter
         adapter = new CallListAdapter(getContext(), contactInfoList);
         recyclerView.setAdapter(adapter);
-        getCallList();
+//        getCallList();
 
         ArrayList<String> arrayList =new ArrayList<>();
         for (int i=0;i<letters.length;i++){
@@ -139,6 +158,44 @@ public class CallListFragment extends Fragment {
         }
         //不自定义则默认26个字母
         quickSideBarView.setLetters(arrayList);
+
+        mPtrFrame = (PtrClassicFrameLayout) view.findViewById(R.id.rotate_header_list_view);
+        mPtrFrame.setLastUpdateTimeRelateObject(this);
+        mPtrFrame.setPtrHandler(new PtrHandler() {
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                mPtrFrame.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //在这写刷新要完成的代码
+                        if(isSearching){
+                            getSearchCallList(search_et.getText().toString());
+                        }else {
+                            getCallList();
+                        }
+                    }
+                }, 0);
+            }
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
+            }
+        });
+        // the following are default settings
+        mPtrFrame.setResistance(1.7f);
+        mPtrFrame.setRatioOfHeaderHeightToRefresh(1.2f);
+        mPtrFrame.setDurationToClose(200);
+        mPtrFrame.setDurationToCloseHeader(1000);
+        // default is false
+        mPtrFrame.setPullToRefresh(false);
+        // default is true
+        mPtrFrame.setKeepHeaderWhenRefresh(true);
+        mPtrFrame.postDelayed(new Runnable() {    //启动自动刷新一次
+            @Override
+            public void run() {
+                mPtrFrame.autoRefresh();
+            }
+        }, 100);
     }
 
     private void setListener() {
@@ -198,7 +255,7 @@ public class CallListFragment extends Fragment {
                             handler.obtainMessage(CallListFragment.SEARCH, s).sendToTarget();
                             isSearching = true;
                         }else {
-                            handler.obtainMessage(NORMAL).sendToTarget();
+                            handler.obtainMessage(REFRESH).sendToTarget();
                             isSearching = false;
                         }
 
@@ -224,8 +281,14 @@ public class CallListFragment extends Fragment {
     }
 
     private void getCallList() {
+        if (thread!=null){
+            handler.removeCallbacks(thread);
+        }
+        contactInfoList.clear();
+        hashMap.clear();
+        letterList = new ArrayList[letters.length];
         //新开线程，防止通讯录太多联系人，卡顿
-        new Thread(new Runnable() {
+        thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 String[] cols = {ContactsContract.PhoneLookup.DISPLAY_NAME, ContactsContract.CommonDataKinds.Phone.CONTACT_ID};
@@ -263,15 +326,15 @@ public class CallListFragment extends Fragment {
                         hashMap.put(letters[i],contactInfoList.size());
                     if(letterList[i]!=null){
                         contactInfoList.add(new ContactInfo(letters[i]));
-                        handler.obtainMessage(INSERT).sendToTarget();
                         for (int j = 0 ;j < letterList[i].size();j++){
                             contactInfoList.add(letterList[i].get(j));
-                            handler.obtainMessage(INSERT).sendToTarget();
                         }
                     }
                 }
+                handler.obtainMessage(REFRESH).sendToTarget();
             }
-        }).start();
+        });
+        thread.start();
     }
 
     private void getSearchCallList(final String s) {
@@ -287,7 +350,7 @@ public class CallListFragment extends Fragment {
             public void run() {
                 String[] cols = {ContactsContract.PhoneLookup.DISPLAY_NAME, ContactsContract.CommonDataKinds.Phone.CONTACT_ID};
                 //设置查询条件
-                String selection = ContactsContract.PhoneLookup.DISPLAY_NAME + " like '%"+s+"%'";
+                String selection = ContactsContract.PhoneLookup.DISPLAY_NAME + " like '%"+s+"%' or " + ContactsContract.CommonDataKinds.Phone.NUMBER + " like '%"+s+"%'" ;
                 //ContactsContract.CommonDataKinds.Phone.SORT_KEY_PRIMARY 这个参数是让查询结果按字母排序
                 Cursor cursor = getContext().getContentResolver().query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,
                         cols, selection, null, ContactsContract.CommonDataKinds.Phone.SORT_KEY_PRIMARY);
@@ -335,7 +398,10 @@ public class CallListFragment extends Fragment {
         thread.start();
     }
 
-
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
 }
 
 

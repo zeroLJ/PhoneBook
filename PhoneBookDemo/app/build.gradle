@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.3.1' //使用recclerview所需
     compile files('libs/jpinyin-1.0.jar')   //获取首字母所需
     compile 'com.bigkoo:quicksidebar:1.0.3'//字母滑动条所需
+    compile 'in.srain.cube:ultra-ptr:1.0.11' //下拉刷新所需
 }
