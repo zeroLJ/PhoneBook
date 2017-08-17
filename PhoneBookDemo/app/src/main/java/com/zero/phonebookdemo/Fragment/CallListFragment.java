@@ -150,7 +150,6 @@ public class CallListFragment extends Fragment {
         //设置adapter
         adapter = new CallListAdapter(getContext(), contactInfoList);
         recyclerView.setAdapter(adapter);
-//        getCallList();
 
         ArrayList<String> arrayList =new ArrayList<>();
         for (int i=0;i<letters.length;i++){

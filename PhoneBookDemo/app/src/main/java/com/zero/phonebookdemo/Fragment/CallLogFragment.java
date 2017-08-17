@@ -24,6 +24,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+import in.srain.cube.views.ptr.PtrClassicFrameLayout;
+import in.srain.cube.views.ptr.PtrDefaultHandler;
+import in.srain.cube.views.ptr.PtrFrameLayout;
+import in.srain.cube.views.ptr.PtrHandler;
+
 /**
  * create by zero on 2017/8/10.
  */
@@ -31,6 +36,7 @@ public class CallLogFragment extends Fragment {
     ArrayList<CallLogInfo> callLogInfoList = new ArrayList<>();
     RecyclerView recyclerView;
     CallLogAdapter adapter;
+    private PtrClassicFrameLayout mPtrFrame;
 
     public CallLogFragment() {
         // Required empty public constructor
@@ -55,6 +61,38 @@ public class CallLogFragment extends Fragment {
         //设置adapter
         adapter = new CallLogAdapter(getContext(), callLogInfoList);
         recyclerView.setAdapter(adapter);
+
+        mPtrFrame = (PtrClassicFrameLayout) view.findViewById(R.id.rotate_header_list_view);
+        mPtrFrame.setLastUpdateTimeRelateObject(this);
+        mPtrFrame.setPtrHandler(new PtrHandler() {
+            @Override
+            public void onRefreshBegin(PtrFrameLayout frame) {
+                mPtrFrame.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //在这写刷新要完成的代码
+                        callLogInfoList.clear();
+                        callLogInfoList = getCallHistoryList(getActivity(), 50);
+                        adapter = new CallLogAdapter(getContext(), callLogInfoList);
+                        recyclerView.setAdapter(adapter);
+                        mPtrFrame.refreshComplete();//停止刷新效果
+                    }
+                }, 0);
+            }
+            @Override
+            public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
+                return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
+            }
+        });
+        // the following are default settings
+        mPtrFrame.setResistance(1.7f);
+        mPtrFrame.setRatioOfHeaderHeightToRefresh(1.2f);
+        mPtrFrame.setDurationToClose(200);
+        mPtrFrame.setDurationToCloseHeader(1000);
+        // default is false
+        mPtrFrame.setPullToRefresh(false);
+        // default is true
+        mPtrFrame.setKeepHeaderWhenRefresh(true);
         return view;
     }
 

@@ -8,17 +8,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <!--<TextView-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:text="通话记录页面"/>-->
-        <android.support.v7.widget.RecyclerView
+        <in.srain.cube.views.ptr.PtrClassicFrameLayout
+            android:id="@+id/rotate_header_list_view"
+            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:id="@+id/recyclerView_callLog">
-        </android.support.v7.widget.RecyclerView>
+            cube_ptr:ptr_duration_to_close="200"
+            cube_ptr:ptr_duration_to_close_header="1000"
+            cube_ptr:ptr_keep_header_when_refresh="true"
+            cube_ptr:ptr_pull_to_fresh="false"
+            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+            cube_ptr:ptr_resistance="1.7">
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                android:id="@+id/recyclerView_callLog">
+            </android.support.v7.widget.RecyclerView>
+        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
