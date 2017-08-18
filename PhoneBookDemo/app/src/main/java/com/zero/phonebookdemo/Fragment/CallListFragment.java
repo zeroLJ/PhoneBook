@@ -77,6 +77,9 @@ public class CallListFragment extends Fragment {
 
     private boolean isSearching = false;
 
+    private boolean isFirstInit = true;
+    private View view;
+
     private PtrClassicFrameLayout mPtrFrame;
 
     private Handler handler = new Handler(){
@@ -85,29 +88,28 @@ public class CallListFragment extends Fragment {
             super.handleMessage(msg);
             switch (msg.what){
                 case SEARCH:
-                    Log.i("ssss",msg.obj.toString());
                     String str = msg.obj.toString();
                     getSearchCallList(str);
                     break;
                 case SEARCHFINISH:
+                    manager.setStackFromEnd(true);
+                    if (mPtrFrame.isRefreshing()){
+                        mPtrFrame.refreshComplete();//停止刷新效果
+                    }
                     if(isSearching){
                         adapter_search = new CallListAdapter(getContext(), contactInfoList_search);
                         recyclerView.setAdapter(adapter_search);
                         manager.scrollToPositionWithOffset(0,0);
                     }
-                    manager.setStackFromEnd(true);
+                    break;
+                case REFRESH:
                     if (mPtrFrame.isRefreshing()){
                         mPtrFrame.refreshComplete();//停止刷新效果
                     }
-                    break;
-                case REFRESH:
                     if(!isSearching){
                         recyclerView.setAdapter(adapter);
                         manager.scrollToPositionWithOffset(0,0);
                         manager.setStackFromEnd(true);
-                    }
-                    if (mPtrFrame.isRefreshing()){
-                        mPtrFrame.refreshComplete();//停止刷新效果
                     }
                     search_et.setVisibility(View.VISIBLE);
                     break;
@@ -127,15 +129,31 @@ public class CallListFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        imm = (InputMethodManager) getActivity().getSystemService(INPUT_METHOD_SERVICE);
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_call_list, container, false);
-        initView(view);
-        setListener();
-
+        Log.i("ssss","init");
+        if(isFirstInit){
+            isFirstInit = false;
+            imm = (InputMethodManager) getActivity().getSystemService(INPUT_METHOD_SERVICE);
+            view = inflater.inflate(R.layout.fragment_call_list, container, false);
+            initView(view);
+            setListener();
+        }
         return view;
     }
 
+    @Override
+    public void onStart() {
+        super.onStart();
+        Log.i("ssss","start");
+        search_et.addTextChangedListener(textWatcher);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        Log.i("ssss","pause");
+        //不移除监听的话，下次回到此页面会自动执行一次搜索
+        search_et.removeTextChangedListener(textWatcher);
+    }
 
 
     private void initView(View view) {
@@ -150,6 +168,9 @@ public class CallListFragment extends Fragment {
         //设置adapter
         adapter = new CallListAdapter(getContext(), contactInfoList);
         recyclerView.setAdapter(adapter);
+
+        getCallList();
+
 
         ArrayList<String> arrayList =new ArrayList<>();
         for (int i=0;i<letters.length;i++){
@@ -170,6 +191,7 @@ public class CallListFragment extends Fragment {
                         if(isSearching){
                             getSearchCallList(search_et.getText().toString());
                         }else {
+                            Log.i("ssss","get2");
                             getCallList();
                         }
                     }
@@ -180,21 +202,6 @@ public class CallListFragment extends Fragment {
                 return PtrDefaultHandler.checkContentCanBePulledDown(frame, content, header);
             }
         });
-        // the following are default settings
-        mPtrFrame.setResistance(1.7f);
-        mPtrFrame.setRatioOfHeaderHeightToRefresh(1.2f);
-        mPtrFrame.setDurationToClose(200);
-        mPtrFrame.setDurationToCloseHeader(1000);
-        // default is false
-        mPtrFrame.setPullToRefresh(false);
-        // default is true
-        mPtrFrame.setKeepHeaderWhenRefresh(true);
-        mPtrFrame.postDelayed(new Runnable() {    //启动自动刷新一次
-            @Override
-            public void run() {
-                mPtrFrame.autoRefresh();
-            }
-        }, 100);
     }
 
     private void setListener() {
@@ -229,40 +236,6 @@ public class CallListFragment extends Fragment {
             }
         });
 
-        search_et.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                if (timer!=null){
-                    timer.cancel();
-                }
-                timer = new Timer();
-                timer.schedule(new TimerTask() {
-                    @Override
-                    public void run() {
-                        String s =  search_et.getText().toString();
-                        if (!s.equals("")){
-                            handler.obtainMessage(CallListFragment.SEARCH, s).sendToTarget();
-                            isSearching = true;
-                        }else {
-                            handler.obtainMessage(REFRESH).sendToTarget();
-                            isSearching = false;
-                        }
-
-                    }
-                },500);
-            }
-        });
-
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
@@ -270,6 +243,7 @@ public class CallListFragment extends Fragment {
                 imm.hideSoftInputFromWindow(search_et.getWindowToken(), 0);
             }
         });
+
     }
 
     public static CallListFragment newInstance() {
@@ -278,6 +252,40 @@ public class CallListFragment extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
+
+    private TextWatcher textWatcher = new TextWatcher() {
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+        }
+
+        @Override
+        public void afterTextChanged(Editable s) {
+            if (timer!=null){
+                timer.cancel();
+            }
+            timer = new Timer();
+            timer.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    String s =  search_et.getText().toString();
+                    if (!s.equals("")){
+                        handler.obtainMessage(CallListFragment.SEARCH, s).sendToTarget();
+                        isSearching = true;
+                    }else {
+                        handler.obtainMessage(REFRESH).sendToTarget();
+                        isSearching = false;
+                    }
+
+                }
+            },500);
+        }
+    };
 
     private void getCallList() {
         if (thread!=null){
@@ -391,16 +399,13 @@ public class CallListFragment extends Fragment {
                         }
                     }
                 }
+
                 handler.obtainMessage(SEARCHFINISH).sendToTarget();
             }
         });
         thread.start();
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-    }
 }
 
 
