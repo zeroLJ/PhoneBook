@@ -194,7 +194,7 @@ public class CallListFragment extends Fragment {
         SpannableStringBuilder builder = new SpannableStringBuilder();
         String s1 = "没有联系人\n请打开";
         builder.append(s1);
-        String s2 = "系统设置->应用管理->音书->权限管理";
+        String s2 = "系统设置->应用管理->PhoneBookDemo->权限管理";
         builder.append(s2);
         builder.append("检查是否已经开启了读取联系人权限");
         builder.setSpan(new ClickableSpan() {
