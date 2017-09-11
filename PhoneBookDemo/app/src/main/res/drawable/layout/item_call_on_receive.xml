@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/msg_item_call_on_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_10"
+        android:background="@drawable/subtitle_msg_background_end"
+        android:padding="@dimen/space_10"
+        android:text="这是个测试文字段\n这是个测试文字段\n这是个测试文字段"
+        android:textSize="@dimen/textSize_18" />
+</LinearLayout>

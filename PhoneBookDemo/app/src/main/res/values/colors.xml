@@ -1,6 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#f88726</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--
+   **按下左侧导航栏按钮后弹出Dialog对话框背景色
+   -->
+    <color name="blue">#fc04c3e9</color>
+    <color name="black">#FF000000</color>
+    <color name="textBlack">#434343</color>
+    <color name="deepblue">#5151a2</color>
+    <color name="lowblue">#46a3ff</color>
+    <color name="yellow1">#ffe6d9</color>
+    <color name="yellow2">#fff3ee</color>
+    <color name="blue1">#00ffff</color>
+    <color name="blue2">#ecffff</color>
+    <color name="gray1">#e0e0e0</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="caption_background_color">#f0f0f0</color>
+    <color name="c1">#FF000000</color>
+    <color name="c2">#FF444444</color>
+    <color name="c3">#FF888888</color>
+    <color name="c4">#e4ecf1</color>
+    <color name="c5">#FFFFFFFF</color>
+    <color name="c6">#FFFF0000</color>
+    <color name="c7">#FF00FF00</color>
+    <color name="c8">#FF0000FF</color>
+    <color name="c9">#FFFFFF00</color>
+    <color name="c10">#FF00FFFF</color>
+    <color name="c11">#FFFF00FF</color>
+
+    <color name="name">#FF949bad</color>
+    <color name="num">#FFe3e9f1</color>
+    <color name="game_background">#FF414858</color>
+    <color name="game_word">#FF515257</color>
+    <color name="game_word_passbackground">#FFA3A6AD</color>
+
+    <color name="colorLightBlue">#0099FF</color>
+    <color name="colorDarkBlue">#0d85d6</color>
+    <color name="colorLightGray">#E0E0E0</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDarkGray">#7E736B</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorlittleGray">#C7C7C7</color>
+    <color name="colorSplashBackground">#17181A</color>
+    <color name="colorDefination">#00FFFF</color>
+
+    <color name="colorDayPrimary">#00A2ED</color>
+    <color name="colorDayPrimaryDark">#008FD2</color>
+    <color name="colorDayAccent">#008FD2</color>
+    <color name="colorDayWindowBackground">#F3F3F3</color>
+    <color name="colorDayCardView">@color/colorWhite</color>
+    <color name="colorDayCardViewTextUnsel">@color/colorBlack</color>
+    <color name="colorDayCardViewTextSel">#B4B4B4</color>
+    <color name="colorDayNavHeader">@color/colorDayPrimary</color>
+    <color name="colorDayNavMenuUnsel">@color/colorWhite</color>
+    <color name="colorDayNavMenuSel">@color/colorLightGray</color>
+    <color name="colorDayNavMenuText">@color/colorWhite</color>
+
+
+    <color name="colorNightPrimary">#222222</color>
+    <color name="colorNightPrimaryDark">#1E1E1E</color>
+    <color name="colorNightAccent">#1E1E1E</color>
+    <color name="colorNightWindowBackground">#343434</color>
+    <color name="colorNightCardView">#404040</color>
+    <color name="colorNightCardViewTextUnsel">#E7E7E7</color>
+    <color name="colorNightCardViewTextSel">#838383</color>
+    <color name="colorNightNavHeader">#252525</color>
+    <color name="colorNightNavMenuUnsel">#343434</color>
+    <color name="colorNightNavMenuSel">#2C2C2C</color>
+    <color name="colorNightNavMenuText">#858585</color>
+
+    <color name="colorAccountGray">#979ba3</color>
+    <color name="colorCommonBgGray">#ebf0f2</color>
+    <color name="colorPaintTool">#ee9447</color>
+    <color name="colorNavTelphone">#dddddd</color>
+    <color name="colorNavBackground">#525252</color>
+    <color name="colorNavMenuTextColor">#b4b4b4</color>
+    <color name="colorTransparent">#00ffffff</color>
+    <color name="colorBottomBarBackground">#f88826</color>
+    <color name="colorCaptionTextEditToolsBackground">#e5e5e5</color>
+
+    <color name="colorHelpBackground">#7f636363</color>
+
+    <!--按钮或Item点击后转瞬即逝的背景颜色-->
+    <color name="colorButtonOrItemClick">#DDDDDD</color>
 </resources>

@@ -1,0 +1,1507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nuance_voicer_1"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_1"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_2"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_2"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_3"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_3"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_4"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_4"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_5"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_5"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_6"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_6"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_7"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_7"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_8"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_8"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_9"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_9"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_10"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_10"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_11"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_11"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_12"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_12"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_13"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_13"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_14"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_14"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_15"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_15"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_16"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_16"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_17"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_17"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_18"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_18"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_19"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_19"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_20"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_20"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_21"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_21"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_22"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_22"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_23"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_23"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_24"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_24"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_25"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_25"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_26"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_26"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_27"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_27"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_28"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_28"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_29"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_29"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_30"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_30"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_31"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_31"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_32"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_32"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_33"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_33"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_34"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_34"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_35"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_35"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_36"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_36"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_37"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_37"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_38"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_38"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_39"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_39"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_40"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_40"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_41"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_41"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_42"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_42"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_43"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_43"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_44"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_44"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_45"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_45"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_46"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_46"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_47"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_47"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_48"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_48"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_49"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_49"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_50"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_50"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_51"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_51"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_52"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_52"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_53"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_53"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_54"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_54"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_55"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_55"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_56"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_56"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_57"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_57"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_58"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_58"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_59"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_59"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_60"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_60"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_61"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_61"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_62"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_62"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_63"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_63"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_64"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_64"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_65"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_65"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_66"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_66"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_67"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_67"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_68"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_68"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_69"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_69"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_70"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_70"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_71"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_71"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_72"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_72"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_73"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_73"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_74"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_74"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_75"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_75"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_76"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_76"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_77"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_77"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_78"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_78"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_79"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_79"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_80"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_80"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_81"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_81"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_82"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_82"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/nuance_voicer_83"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@drawable/textview_select_style"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:text="@string/nuance_voicer_index_83"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#3E3E3E"
+            android:scaleType="fitXY" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -2,23 +2,70 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.zero.phonebookdemo.Fragment.CallListFragment">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:text="没有联系人\n请打开系统设置->应用管理检查是否已经开启了读取联系人权限"
+                android:id="@+id/tips_tv_call_list"
+                android:visibility="invisible" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <EditText
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="15sp"
-                android:hint="搜索"
-                android:visibility="gone"
-                android:id="@+id/search_et_callList"/>
+                android:layout_height="40dp"
+                android:background="@color/gray1"
+                android:id="@+id/search_layout_call_list">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/call_list_search_background">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="8dp"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="center"
+                        android:background="@drawable/call_list_search_icon"/>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:hint="搜索"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:id="@+id/search_et_callList"/>
+                </LinearLayout>
+            </RelativeLayout>
+
             <in.srain.cube.views.ptr.PtrClassicFrameLayout
                 android:id="@+id/rotate_header_list_view"
                 xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
@@ -58,11 +105,18 @@
             android:layout_alignParentRight="true"
             app:sidebarItemHeight="15sp"
             android:layout_marginTop="45dp"
-            app:sidebarTextColor="@android:color/black"
-            app:sidebarTextColorChoose="@color/colorPrimary"
+            app:sidebarTextColor="@color/colorPrimary"
+            app:sidebarTextColorChoose="@color/black"
             app:sidebarTextSize="@dimen/textSize_quicksidebar"
             app:sidebarTextSizeChoose="@dimen/textSize_quicksidebar_choose" />
-    </RelativeLayout>
 
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/progressBar_call_list" />
+
+    </RelativeLayout>
 
 </FrameLayout>

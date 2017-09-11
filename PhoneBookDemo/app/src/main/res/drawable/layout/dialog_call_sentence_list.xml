@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/gray1"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:text="点击后转化为语音发送"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_dialog_call_sentence_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/caption_background_color"
+        />
+    <TextView
+        android:id="@+id/cancel_tv_dialog_call_sentence_list"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:textSize="18sp"
+        android:layout_height="wrap_content"
+        android:text="取消"/>
+</LinearLayout>

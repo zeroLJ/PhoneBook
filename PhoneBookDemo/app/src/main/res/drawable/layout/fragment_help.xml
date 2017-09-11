@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/helpLayout"
+    android:background="@color/colorTransparent">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/helpExampleUI"
+        android:src="@drawable/help_example_1"
+        android:scaleType="fitXY"/>
+
+    <ImageView
+        android:layout_width="@dimen/space_24"
+        android:layout_height="@dimen/space_43"
+        android:src="@drawable/help_arrow_right"
+        android:layout_marginRight="@dimen/space_14"
+        android:layout_marginEnd="@dimen/space_14"
+        android:scaleType="fitCenter"
+        android:id="@+id/help_arrow_right"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="@dimen/space_24"
+        android:layout_height="@dimen/space_43"
+        android:src="@drawable/help_arrow_left"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/space_14"
+        android:layout_marginStart="@dimen/space_14"
+        android:scaleType="fitCenter"
+        android:id="@+id/help_arrow_left"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/help_btn_close"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/help_close_btn"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/space_40"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_marginEnd="@dimen/space_10"/>
+    
+</RelativeLayout>

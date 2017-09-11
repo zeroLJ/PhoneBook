@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:windowSoftInputMode="adjustResize">
+
+    <RelativeLayout
+        android:id="@+id/caption_main_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/caption_bottom_layout">
+
+        <!--列表控件-->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/caption_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:background="@color/caption_background_color" />
+
+        <LinearLayout
+            android:id="@+id/caption_long_click_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_long_click_record"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="24dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/caption_long_click_record_image"
+                android:layout_width="@dimen/space_64"
+                android:layout_height="@dimen/space_64"
+                android:background="@drawable/ic_volume_w0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="正在录音..."
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <com.voibook.voicebook.main.caption.multiuser.custom.MultiuserCustomModeIcon
+        android:id="@+id/caption_modeswitch"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginTop="12dp"
+        android:alpha="0.7"
+        android:scaleType="fitXY" />
+
+
+    <!--软键盘弹起时候的透明布局-->
+    <LinearLayout
+        android:id="@+id/caption_keyboard_emptylayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/caption_bottom_layout"
+        android:orientation="horizontal"
+        android:visibility="gone" />
+
+
+    <FrameLayout
+        android:id="@+id/caption_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/caption_keyboard_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCaptionTextEditToolsBackground"
+            android:paddingBottom="16.16dp"
+            android:paddingLeft="@dimen/space_8"
+            android:paddingRight="@dimen/space_8"
+            android:paddingTop="16.16dp"
+            android:visibility="gone">
+
+            <ImageButton
+                android:id="@+id/editSentence_ibt_call_on"
+                android:layout_width="@dimen/space_30"
+                android:layout_height="@dimen/space_30"
+                android:layout_centerVertical="true"
+                android:background="@color/colorTransparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/caption_speaker_disable" />
+
+            <EditText
+                android:id="@+id/caption_keyboard_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/space_10"
+                android:layout_marginRight="@dimen/space_10"
+                android:layout_toEndOf="@+id/editSentence_ibt_call_on"
+                android:layout_toLeftOf="@+id/caption_keyboard_sendtext"
+                android:layout_toRightOf="@+id/editSentence_ibt_call_on"
+                android:layout_toStartOf="@+id/caption_keyboard_sendtext"
+                android:background="@drawable/with_corners_bg"
+                android:hint="输入你想说的话"
+                android:maxLines="3"
+                android:paddingBottom="@dimen/space_5"
+                android:paddingEnd="@dimen/space_14"
+                android:paddingLeft="@dimen/space_14"
+                android:paddingRight="@dimen/space_14"
+                android:paddingStart="@dimen/space_14"
+                android:paddingTop="@dimen/space_5"
+                android:textSize="@dimen/textSize_16" />
+
+
+            <TextView
+                android:id="@+id/caption_keyboard_sendtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/caption_send_btn_background"
+                android:paddingBottom="@dimen/space_5"
+                android:paddingEnd="@dimen/space_14"
+                android:paddingLeft="@dimen/space_14"
+                android:paddingRight="@dimen/space_14"
+                android:paddingStart="@dimen/space_14"
+                android:paddingTop="@dimen/space_5"
+                android:text="@string/str_send"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/textSize_16" />
+
+        </RelativeLayout>
+
+        <!--父布局用于填充颜色-->
+        <RelativeLayout
+            android:id="@+id/caption_recording_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:visibility="visible">
+
+            <com.voibook.voicebook.main.caption.multiuser.custom.AudioRecorderButton
+                android:id="@+id/caption_recording_button"
+                android:layout_width="@dimen/space_64"
+                android:layout_height="@dimen/space_64"
+                android:layout_centerInParent="true"
+                android:background="@drawable/recording_off"
+                android:shadowColor="#000000"
+                android:textColor="#fff" />
+
+            <ImageButton
+                android:id="@+id/caption_recording_changetokeyboard"
+                android:layout_width="@dimen/space_40"
+                android:layout_height="@dimen/space_40"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/space_20"
+                android:layout_marginRight="@dimen/space_20"
+                android:background="@color/colorTransparent"
+                android:scaleType="centerInside"
+                android:src="@drawable/caption_keyboard" />
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/caption_actionmenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/space_10"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:menu_colorNormal="@color/colorTransparent"
+        fab:menu_colorPressed="#ccffffff"
+        fab:menu_colorRipple="#ccffffff"
+        fab:menu_fab_size="mini"
+        fab:menu_icon="@drawable/jiahao"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_position="right"
+        fab:menu_labels_singleLine="true"
+        fab:menu_shadowRadius="0dp">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/caption_actionbutton_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/caption_1"
+            fab:fab_label="语言"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/caption_actionbutton_voicer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/caption_2"
+            fab:fab_label="发音人"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/caption_actionbutton_textsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/caption_3"
+            fab:fab_label="文字大小"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/caption_actionbutton_textcolor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/caption_4"
+            fab:fab_label="文字颜色"
+            fab:fab_size="mini" />
+
+        <!--音书盒子推出之前，音频源暂不可见 -->
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/caption_actionbutton_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/caption_5"
+            android:visibility="gone"
+            fab:fab_label="音频源"
+            fab:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</RelativeLayout>

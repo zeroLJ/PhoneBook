@@ -12,7 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import com.zero.phonebookdemo.Adapter.CallListAdapter;
+import com.zero.phonebookdemo.callList.CallListAdapter;
+import com.zero.phonebookdemo.view.MLRoundedImageView;
 
 import java.io.InputStream;
 import java.util.ArrayList;

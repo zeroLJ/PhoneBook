@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_10">
+
+        <TextView
+            android:id="@+id/item_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="实时字幕"
+            android:textSize="@dimen/textSize_8" />
+
+        <TextView
+            android:id="@+id/item_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="2017-05-02 19:11"
+            android:textSize="@dimen/textSize_8" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/space_10"
+        android:layout_marginLeft="@dimen/space_10"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_marginStart="@dimen/space_10"
+        android:background="@drawable/subtitle_msg_background_end"
+        android:padding="@dimen/space_10"
+        android:text="这是个测试文字段\n这是个测试文字段\n这是个测试文字段"
+        android:textSize="@dimen/textSize_18" />
+
+</LinearLayout>

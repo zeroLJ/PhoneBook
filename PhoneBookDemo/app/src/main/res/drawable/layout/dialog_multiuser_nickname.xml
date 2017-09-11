@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/dialog_multiuser_nickname_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="为方便您的家人、朋友在群聊中认出您，请您设置一个容易辨认的名称：" />
+
+    <EditText
+        android:id="@+id/dialog_multiuser_nickname_edit"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dialog_multiuser_nickname_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center|bottom"
+        android:lines="1"
+        android:layout_marginBottom="4dp"
+        android:textSize="14sp"
+        android:hint="请输入名称"
+        android:maxLength="8" />
+
+</RelativeLayout>

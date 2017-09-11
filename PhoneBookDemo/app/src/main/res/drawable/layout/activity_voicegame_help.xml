@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryGray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- The Toolbar displayed at the top -->
+        <include
+            layout="@layout/toolbar_common"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:shrinkColumns="*"
+                        android:stretchColumns="*">
+
+                        <TableRow
+                            android:id="@+id/row1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <TextView
+                                android:id="@+id/row1_col1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_span="6"
+                                android:gravity="center"
+                                android:text="斩首数与军衔对应关系表"
+                                android:textSize="18dp"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp">
+
+                            <TextView
+                                android:id="@+id/row2col1"
+                                android:text=""></TextView>
+
+                            <TextView
+                                android:id="@+id/row2col2"
+                                android:text="陆军(词语)"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row2col3"
+                                android:text="海军(句子)"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row2col4"
+                                android:text="空军(文章)"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp">
+
+                            <TextView
+                                android:id="@+id/row3col1"
+                                android:text="工兵"></TextView>
+
+                            <TextView
+                                android:id="@+id/row3col2"
+                                android:text="0-99"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row3col3"
+                                android:text="0-9"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row3col4"
+                                android:text="0"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row4col1"
+                                android:text="排长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row4col2"
+                                android:text="100-299"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row4col3"
+                                android:text="10-29"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row4col4"
+                                android:text="1-2"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row5col1"
+                                android:text="连长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row5col2"
+                                android:text="300-599"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row5col3"
+                                android:text="30-59"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row5col4"
+                                android:text="3-5"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row6col1"
+                                android:text="营长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row6col2"
+                                android:text="600-1099"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row6col3"
+                                android:text="60-109"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row6col4"
+                                android:text="6-10"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row7"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row7col1"
+                                android:text="团长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row7col2"
+                                android:text="1100-1899"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row7col3"
+                                android:text="110-189"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row7col4"
+                                android:text="11-18"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row8col1"
+                                android:text="旅长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row8col2"
+                                android:text="1900-3199"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row8col3"
+                                android:text="190-319"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row8col4"
+                                android:text="19-31"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row9col1"
+                                android:text="师长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row9col2"
+                                android:text="3200-5299"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row9col3"
+                                android:text="320-529"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row9col4"
+                                android:text="32-52"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row10col1"
+                                android:text="军长"></TextView>
+
+                            <TextView
+                                android:id="@+id/row10col2"
+                                android:text="5300-8699"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row10col3"
+                                android:text="530-869"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row10col4"
+                                android:text="53-86"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row11"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/row11col1"
+                                android:text="司令"></TextView>
+
+                            <TextView
+                                android:id="@+id/row11col2"
+                                android:text="≥8700"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row11col3"
+                                android:text="≥870"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+
+                            <TextView
+                                android:id="@+id/row11col4"
+                                android:text="≥87"
+                                android:textStyle="bold"
+                                android:typeface="serif"></TextView>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:text="使用须知"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="语音训练功能需要联网，请在网络顺畅的条件下使用。如果在使用过程中卡住了，请暂停一下再开始。如果在训练中发现了错别字或者始终无法读正确的词句，欢迎反馈给我们。建议听力损失比较严重的用户使用时用一只手摸着喉咙，一只手摸着嘴唇，以便感知自己的发音。"
+                        android:textSize="16sp"
+                        android:id="@+id/textView2" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:text="万词斩说明"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="一局万词斩中的词语阅读不限制顺序，读对的词语越多、所用时间越少，得分越高。一个词语可以反复朗读，读对之后该词的颜色会变成灰色。用户可以在反复朗读的过程中纠正自己的发音，如果身边有会讲话的健听人指导，效果更佳。"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:text="千句杀说明"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="一局千句杀中的句子阅读不限制顺序，读对的句子越多、所用时间越少，得分越高。一个句子完全读对后文字会变成绿色并自动跳转到下一句。如果没有完全读对，则读对的部分会变成绿色，未读对的部分会变成红色，用户可以对照着反复朗读，纠正自己的发音。如果身边有会讲话的健听人指导，效果更佳。"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="60dp"
+                        android:text="百文灭说明"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="一局百文灭中的文章的阅读必须是按顺序从头到尾阅读，任何有标点符号的地方都必须停顿一下，任何没有标点符号的地方都不能停顿。每读一句话翻译出来的文字个数不能少于到下一个标点符号之间的文字个数，否则需要重读该句。已读的文字会改变颜色，绿色表示读正确的文字，红色表示未读正确的文字。凡是颜色变化了的文字，表示已经读过了，必须读下一句，不能再重读。一篇文章中读对的文字数量越多，所用时间越少，得分越高。因为文章中始终会有一些人名、地名、同音字难以翻译准确，因此只要一篇文章正确率超过80%即算\'斩首成功\'。"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

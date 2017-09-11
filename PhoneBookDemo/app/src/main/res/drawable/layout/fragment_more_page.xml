@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/voicebook_background">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/voicebook_background"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_30"
+        android:id="@+id/layout_feature_1">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageButton
+                android:id="@+id/voiceTraining"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:src="@drawable/voicebook_voice_traning"
+                android:background="@color/colorTransparent"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_title_voicegame"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/space_10"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/voicebook_video_lesson"
+                android:id="@+id/videoLesson"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_seting_video_title"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/space_10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_30"
+        android:layout_below="@+id/layout_feature_1">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <ImageButton
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/voicebook_writing_board"
+                android:id="@+id/writingBoard"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_title_paint"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/space_10" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <ImageButton
+                android:id="@+id/calling"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:src="@drawable/voicebook_voice_traning"
+                android:background="@color/colorTransparent"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="打电话"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/space_10"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ImageButton
+                android:id="@+id/tvSubtitles"
+                android:layout_width="100dp"
+                android:layout_height="116dp"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/voicebook_tv_subtitles"
+                android:layout_gravity="center"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_title_tv"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginTop="@dimen/space_10"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

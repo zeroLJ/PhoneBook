@@ -1,36 +1,62 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.zero.phonebookdemo.Fragment.CallLogFragment">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <in.srain.cube.views.ptr.PtrClassicFrameLayout
-            android:id="@+id/rotate_header_list_view"
-            xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textSize="20sp"
+                android:text="没有通话记录\n请打开系统设置->应用管理检查是否已经开启了读取通话记录权限"
+                android:id="@+id/tips_tv_call_log"
+                android:visibility="gone" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            cube_ptr:ptr_duration_to_close="200"
-            cube_ptr:ptr_duration_to_close_header="1000"
-            cube_ptr:ptr_keep_header_when_refresh="true"
-            cube_ptr:ptr_pull_to_fresh="false"
-            cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
-            cube_ptr:ptr_resistance="1.7">
-            <android.support.v7.widget.RecyclerView
+            android:orientation="vertical">
+            <in.srain.cube.views.ptr.PtrClassicFrameLayout
+                android:id="@+id/rotate_header_list_view"
+                xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scrollbars="vertical"
-                android:id="@+id/recyclerView_callLog">
-            </android.support.v7.widget.RecyclerView>
-        </in.srain.cube.views.ptr.PtrClassicFrameLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
+                cube_ptr:ptr_duration_to_close="200"
+                cube_ptr:ptr_duration_to_close_header="1000"
+                cube_ptr:ptr_keep_header_when_refresh="true"
+                cube_ptr:ptr_pull_to_fresh="false"
+                cube_ptr:ptr_ratio_of_header_height_to_refresh="1.2"
+                cube_ptr:ptr_resistance="1.7">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:id="@+id/recyclerView_callLog">
+                </android.support.v7.widget.RecyclerView>
+            </in.srain.cube.views.ptr.PtrClassicFrameLayout>
+        </LinearLayout>
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/log"/>
-    </LinearLayout>
+            android:layout_centerInParent="true"
+            android:id="@+id/progressBar_call_log" />
+    </RelativeLayout>
 
 </FrameLayout>
